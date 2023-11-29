@@ -1,0 +1,22 @@
+{
+  "name": "javascript-office",
+  "version": "1.0.0",
+  "description": "Continue Practise...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stmg202022/Javascript-office.git"
+  },
+  "author": "Samsontmg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stmg202022/Javascript-office/issues"
+  },
+  "homepage": "https://github.com/stmg202022/Javascript-office#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
