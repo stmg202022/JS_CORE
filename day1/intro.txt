@@ -1,0 +1,42 @@
+
+
+JS
+
+#History:
+JavaScript was invented by Brendan Eich in 1995. 
+It was developed for Netscape 2, and became the ECMA-262 standard in 1997. 
+After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the Firefox browser. 
+Mozilla's latest version was 1.8.5.
+
+Netscape => Mozilla firebox(spider-monkey) => Chrome (V8 engine)
+
+
+#About Js
+1. it is a scripting language for web pages.
+2. It is run in browser environment as well as some non browser environment such as Node.JS
+3. It is lightweight interpreted.
+4. It is prototype-based.
+5. It is single-threaded.
+6. It is interpreted language.
+
+#Js run environment:
+1. in inside the body element of html using <script></script> element.
+2. Node.js environment or some...
+3. chrome browser's console
+
+
+##How Js works on Chrome browser ?
+Before it. See about DOM and CSSOM (browser maths).
+Js execution will be holded until the CSSOM is ready. (JS-CSSOM)
+
+#V8
+It is the combination of both (JIT) compiler and interpreter to convert into bytecode. 
+
+Js code can be get from the network server, catch, etc by using URL.
+There is a V8 engine in the chrome browser which helps to interprete and compiled Js code by using profiler into machine code for executions.
+
+#(JIT) Just In Time (it helps to make js performace fast)
+{ network, cache, server worker} => Js file => parse => AST (Abstract syntax Tree) => interprete + profiler
+interpreter => bytecode
+profiler => compiler => machine code => bytecode 
+parse => it means to check js code line by line for grammatical. if the js code is correctly written then it goes to create AST
