@@ -1,0 +1,11 @@
+.headRow {
+  display: flex;
+}
+
+.divCell {
+  flex: 1;
+}
+
+.divRow {
+  flex: 1;
+}
