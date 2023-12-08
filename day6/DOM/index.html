@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+  <script src="./dom_script.js"></script>
+  <body>
+    <div id="dom">
+      <div id="dom_header">
+        <h1>Introduction to DOM</h1>
+      </div>
+      <div>
+        <div id="dom_intro" class="show">
+            <p >
+                DOM stands for Document Object Module. Browser recesive first Html code file form our local, server through url path or directory.
+                First browser read all the html, css, js codes in the form of bytes then it Browser started to convert it into charecter and token.
+                Secondly Browser converts them into node and each node are placed into tree structure like formation which we called DOM.
+                This stage is also known as parseing stage.
+                Then at last Html content are Display into charecter in the webpage.
+                <br />
+                <br />
+                That's why we can get all the property and method related to the html elemet in the browser window.document or
+                We can get all the event/event handler related to DOM in the window.document 
+
+                <br />
+                <br />
+
+
+                <h2>EVENT HANDLER</h2> 
+                There are two type of event handler provied by js to manupulate or to make user interaction in the Dom: <br />
+                *addEventListener() <br />
+                *removeEventListener()
+                <br />
+                *dispatchListener()  //have to read about it which is present in the browser window....
+                <br />
+                <br />
+
+
+                <h2>EVENT LISTENER</h2>
+                *event ("click", "blur", "keydown" etc.) <br />
+                *event object (e)  //it is an object provied by browser js for manupulateing that DOM. <br />
+                <br />
+                <br />
+                syntax in (Browser console):
+                    console.dir(document)
+            </p>
+      </div>
+        <button id="showHide">Show</button>
+
+        <form action="" method="post" class="loginForms">
+
+            <label for="name" >Email: </label>
+            <input id="email" type="email">
+            
+            <label for="password">password: </label>
+            <input id="password" type="password" >
+
+            <input type="submit" value="Submit" class="submit">
+
+        </form>
+    </div>
+  </body>
+</html>
