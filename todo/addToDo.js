@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   );
   const todoResult = document.getElementById("todo__result");
   const notFound = document.getElementById("notFound");
+  let lists_items = document.querySelectorAll("li");
 
   function getFromLoalstorage() {
     let toDoLists = JSON.parse(localStorage.getItem("toDoLists")) || [];
@@ -196,25 +197,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (inputList.trim() === "") {
       alert("Add to do...");
     } else {
-      list = {
-        todoName: inputList,
-        submitDate: new String(new Date()),
-        complete: false,
-      };
-      console.log(list);
+      // check todo exist or not
 
-      toDoLists = [...toDoLists, list];
-      storeOnLocalStorage(toDoLists);
-      getFromLoalstorage();
+      let exitTodo = toDoLists.find((list) => list.todoName === inputList);
 
-      returnLi(list);
+      if (exitTodo) {
+        alert("Todo with same name & charecter not accepted ..");
+      } else {
+        list = {
+          todoName: inputList,
+          submitDate: new String(new Date()),
+          complete: false,
+        };
+        console.log(list);
+        toDoLists = [...toDoLists, list];
+        storeOnLocalStorage(toDoLists);
+        getFromLoalstorage();
+        returnLi(list);
+        lists_items = document.querySelectorAll("li");
 
-      toDoInput.value = "";
-      inputList = "";
+        toDoInput.value = "";
+        inputList = "";
+      }
     }
   });
-
-  const lists = document.querySelectorAll("li");
 
   let serach_key = "";
   const searchFun = () => {
@@ -224,27 +230,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (searchInput.value.trim() === "") {
           // alert("Search to do...");
 
-          lists.forEach((li, indx) => {
+          lists_items.forEach((li, indx) => {
             todoList_lists.appendChild(li);
           });
         } else {
           serach_key = searchInput.value;
 
           let matchList = 0;
-          lists.forEach((li) => {
+          lists_items.forEach((li) => {
             let values = li.getAttributeNode("value").value;
 
             if (values.includes(serach_key)) {
               todoList_lists.appendChild(li);
               matchList++;
-              console.log(matchList, "kjhkhksdfdsafds");
+              console.log("==================================", matchList);
             } else {
               notFound.style.display = "none";
               li.remove();
             }
           });
 
-          if (matchList > 0) {
+          if (matchList >= 1) {
             notFound.style.display = "none";
             console.log(matchList);
           } else {
@@ -257,21 +263,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
   searchFun();
 
-  const searchBlurFun = () => {
-    searchInput.addEventListener("blur", () => {
-      console.log(typeof searchInput.value);
+  // const searchBlurFun = () => {
+  //   searchInput.addEventListener("blur", () => {
+  //     console.log(typeof searchInput.value);
 
-      if (searchInput.value === "") {
-        console.log("empty search with lists: ", lists);
-        lists.forEach((li) => {
-          todoList_lists.appendChild(li);
-        });
+  //     if (searchInput.value === "") {
+  //       console.log("empty search with lists: ", lists);
+  //       lists.forEach((li) => {
+  //         todoList_lists.appendChild(li);
+  //       });
 
-        if (lists) {
-          notFound.style.display = "none";
-        }
-      }
-    });
-  };
-  searchBlurFun();
+  //       if (lists) {
+  //         notFound.style.display = "none";
+  //       }
+  //     }
+  //   });
+  // };
+  // searchBlurFun();
 });
