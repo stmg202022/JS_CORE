@@ -16,3 +16,5 @@ DAY7/8: MINIPROJECT PRACTISE IN JS/DOM ON BRANCH miniproject
 
 DAY9: ADDED CSS ON MINIPROJECT(TODO) // STUDY ON REAL DOM VS VIRTUAL DOM
 (You have to study about difference between REAL DOM AND VIRTUAL DOM...if you want to do project on react)
+
+DAY10: PRACTISING....
