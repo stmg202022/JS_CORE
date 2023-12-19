@@ -214,7 +214,7 @@ ul li:hover {
 }
 
 #todo__result {
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin-bottom: 36px;
 }
