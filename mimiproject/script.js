@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const lists_moves = document.getElementById("lists_moves");
+
   const move_learn_method = document.getElementById("move_learn_method");
   const version_group_list = document.getElementById("version_group_list");
   // const button_list = document.getElementById("button_list");
