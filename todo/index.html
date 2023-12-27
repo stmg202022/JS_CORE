@@ -11,7 +11,17 @@
     <script src="./script.js"></script>
   </head>
   <body>
-    <div>
+    <div id="deleteContainer">
+      <div id="pupUpCard">
+        <h2>ARE YOU SURE WANT TO DELETE IT ?</h2>
+
+        <div id="sureButton">
+          <button id="no__btn" class="btn__complete">NO</button>
+          <button id="yes__btn" class="btn__danger">YES</button>
+        </div>
+      </div>
+    </div>
+    <div id="container">
       <div id="todo">
         <div id="card">
           <div class="todo__head">
@@ -69,7 +79,7 @@
           </div>
 
           <div id="notFound" class="card">
-            <h2 id="result__heading">OOPs!!! NOT FOUND.</h2>
+            <h2 id="result__heading">OOPs!!! NOT FOUND...</h2>
           </div>
 
           <div id="todoLists">
